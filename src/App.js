@@ -3,6 +3,7 @@ import QRCode from 'qrcode.react'
 import { useInterval } from './hooks/set-interval'
 import moment from 'moment'
 import withSizes from 'react-sizes'
+import GitHubForkRibbon from 'react-github-fork-ribbon'
 
 const getTime = () => moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
 
@@ -24,6 +25,12 @@ const App = ({ width, height }) => {
           fgColor={ '#FFF' }
         />
       </div>
+      <GitHubForkRibbon
+        href="https://github.com/kaelhem/qr-clock"
+        target="_blank"
+        position="right"
+        color="orange"
+      >Fork me on GitHub</GitHubForkRibbon>
     </div>
   )
 }
