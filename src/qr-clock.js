@@ -7,7 +7,7 @@ import GitHubForkRibbon from 'react-github-fork-ribbon'
 
 const getTime = () => moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
 
-const App = ({ width, height }) => {
+const QRClock = ({ width, height }) => {
   let [time, setTime] = useState(getTime())
 
   useInterval(() => {
@@ -35,4 +35,4 @@ const App = ({ width, height }) => {
   )
 }
 
-export default withSizes(sizes => sizes)(App)
+export default withSizes(sizes => sizes)(QRClock)
